@@ -23,7 +23,7 @@ cp .env.example .env
 python app.py
 ```
 
-Open `http://raspberry-pi:8080` and enter the EVCC URL/token (if needed) and Shelly details. Settings are stored in `data/config.json`.
+Open `http://raspberry-pi:8090` and enter the EVCC URL/token (if needed) and Shelly details. Settings are stored in `data/config.json`.
 
 ## EVCC data mapping
 
