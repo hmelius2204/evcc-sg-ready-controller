@@ -1,0 +1,16 @@
+[Unit]
+Description=EVCC surplus Wolf SG Ready controller
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/opt/evcc-sg-ready
+EnvironmentFile=-/opt/evcc-sg-ready/.env
+ExecStart=/opt/evcc-sg-ready/.venv/bin/python /opt/evcc-sg-ready/app.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
